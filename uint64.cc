@@ -151,8 +151,7 @@ NAN_SETTER(UInt64::SetSign)
 NAN_GETTER(UInt64::GetHi32)
 {
   UInt64 *obj = Nan::ObjectWrap::Unwrap<UInt64>(info.Holder());
-  RET(Nan::New((uint32_t)(obj->value>>32)));
-//  RET((uint32_t)(obj->value>>32));  // nan issue #552
+  RET((uint32_t)(obj->value>>32));
 }
 
 NAN_SETTER(UInt64::SetHi32)
@@ -164,8 +163,7 @@ NAN_SETTER(UInt64::SetHi32)
 NAN_GETTER(UInt64::GetLo32)
 {
   UInt64 *obj = Nan::ObjectWrap::Unwrap<UInt64>(info.Holder());
-  RET(Nan::New((uint32_t)obj->value));
-//  RET((uint32_t)obj->value);  // nan issue #552
+  RET((uint32_t)obj->value);
 }
 
 NAN_SETTER(UInt64::SetLo32)

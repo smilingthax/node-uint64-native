@@ -1,7 +1,12 @@
 {
   "name": "uint64-native",
   "version": "0.1.0",
-  "description": "UInt64 for Nodejs",
+  "description": "Native UInt64 object for Nodejs",
+  "homepage": "https://github.com/smilingthax/node-uint64-native",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smilingthax/node-uint64-native"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,8 +14,12 @@
   },
   "author": "Tobias Hoffmann",
   "license": "MIT",
+  "keywords": [
+    "Int64",
+    "UInt64"
+  ],
   "dependencies": {
-    "nan": "^2.2.0",
+    "nan": "^2.2.1",
     "node-gyp": "^3.3.1"
   }
 }
