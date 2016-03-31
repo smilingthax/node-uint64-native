@@ -23,15 +23,10 @@ static char decDigit(char c)
   return -1;
 }
 
-uint64_t u64FromString(const char *s,int len)
+uint64_t u64FromString(const char *s,const char *end)
 {
-  if (len==0) {
-    return 0;
-  }
-
   uint64_t ret=0;
-  const char *end=s+len;
-  if ( (len>2)&&(s[0]=='0')&&(s[1]=='x') ) { // hex
+  if ( (s+2<end)&&(s[0]=='0')&&(s[1]=='x') ) { // hex
     for (s+=2; s!=end; s++) {
       const char res=hexDigit(*s);
       if (res<0) {

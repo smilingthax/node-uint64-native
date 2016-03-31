@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-uint64_t u64FromString(const char *s,int len);
+uint64_t u64FromString(const char *s,const char *end);
 
 // returns NULL on bad radix or missing scratch, else pointer to result
 // scratch space must be at least 65 bytes
